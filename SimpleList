@@ -1,0 +1,11 @@
+num = []
+num.append(1)
+num.append(2)
+num.append(3)
+print(num)
+print('Pick a number:')
+inputmeu = int(input()) + 1
+if inputmeu <= len(num) - 1:
+    print(num[inputmeu])
+else:
+    print('error')
