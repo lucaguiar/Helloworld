@@ -1,0 +1,27 @@
+def cubefunction():
+    num = input('Choose an integer: ')
+    num = int(num)
+    ans = 0
+    while ans**3 < num:
+        ans = ans + 1
+    if ans**3 != num:
+        print(str(num) + ' is not a perfect cube!')
+        again()
+    else:
+        print(str(num) + ' is a perfect cube!')
+        again()
+        
+def again():
+    again = input('Want to check another number? \n1)YES\n2)NO\n')
+    again = int(again)
+    if again == 1:
+        cubefunction()
+    elif again == 2:
+        print('thanks for using this program!')
+        quit()
+    else:
+        print('are you dumb? the options are 1 or 2.')
+        again()
+
+cubefunction()
+
