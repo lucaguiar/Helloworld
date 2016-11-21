@@ -2,12 +2,17 @@ def cubefunction():
     num = input('Choose an integer: ')
     num = int(num)
     ans = 0
-    while ans**3 < num:
+    #abs is used to support negative and positive numbers
+    while ans**3 < abs(num):
         ans = ans + 1
-    if ans**3 != num:
+    if ans**3 != abs(num):
         print(str(num) + ' is not a perfect cube!')
         again()
     else:
+        #this if statement is to check if the ans needs to be
+        #negative or not
+        if num < 0:
+            ans = -ans
         print(str(num) + ' is a perfect cube!')
         again()
         
@@ -24,4 +29,3 @@ def again():
         again()
 
 cubefunction()
-
